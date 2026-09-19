@@ -1,44 +1,43 @@
-1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://<your_account>.github.io/js_task_parse_list_DOM/)
-2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
-    - Run `npm run test` command to test your code;
-    - Run `npm run test:only -- -n` to run fast test ignoring linter;
-    - Run `npm run test:only -- -l` to run fast test with additional info in console ignoring linter.
+# 🧪 QA Automation Portfolio: DOM List Parsing Validation
 
-### Task: Parse list with data attributes
+> About this repository: This project demonstrates automated UI testing of dynamic DOM manipulation (list parsing and data extraction algorithms) using Cypress. It also highlights a modern "Shift-Left" QA approach through extensive static code analysis and Continuous Integration (CI/CD).
 
-Hey there! Can you parse data from the list and sort it based on data attributes?
+![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Static Analysis](https://img.shields.io/badge/Static_Analysis-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
-Your task: Sort list by salary in descending order.
-Get an array of employees. Write two functions: 
-- first, which sorts the list by salary from data attributes
-- second, which returns an array of objects, where objects are employees.
+## 🎯 Project Overview
 
-The schema for the employee:
-```
-{
-  name, 
-  position,
-  salary,
-  age
-}
-```
+This application is a Vanilla JavaScript implementation focused on parsing, traversing, and extracting structured data from list elements within the DOM.
 
-Employees list:
+As a QA Automation Engineer, my focus in this repository is to validate DOM traversal logic, data mapping accuracy, and structural integrity to ensure robust handling of list-based UI components.
 
-![Preview](./src/images/preview.png)
+## 🛠️ QA Tech Stack & Tools
 
-Expected result after soring:
+* **E2E / UI Automation:** Cypress
+* **CI/CD Pipeline:** GitHub Actions (Automated test execution on push/PR)
+* **Static Code Analysis (Shift-Left QA):** ESLint, Stylelint, LintHTML, Prettier
+* **Core Technologies:** HTML5, SCSS, Vanilla JS (ES6+)
 
-![Result](./src/images/result.png)
+## 📊 Test Strategy & Coverage
 
-You can read about non-standard attributes and dataset [here](https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset)
+### 1. Automated UI Testing (Cypress)
+Located in `cypress/integration/jsTaskParseListDOM.spec.js`, the test suite simulates real user interactions and verifies:
+* Proper rendering and identification of target list elements in the DOM.
+* Accurate parsing and extraction of data structures from lists.
+* Stability and integrity of the DOM structure post-processing.
 
-##### Steps to do this challenge:
-1) Find and get a list from the document.
-2) Create function `sortList`, which takes a `list` property, and sorts list items in descending order by salary from data attribute. (Salary from data attribute is a string, do not forget to convert it to number, write helper function for it). Append sorted items to list.
-3) Create function `getEmployees`, which takes a `list` property, and returns an array of right objects.
-4) Call both functions.
-5) Done.
+### 2. Continuous Integration (CI/CD)
+The project utilizes GitHub Actions (`.github/workflows/test.yml`) to enforce quality gates. Every commit automatically triggers a pipeline that:
+* Lints the HTML, CSS, and JS files to catch syntax and formatting issues early.
+* Runs the Cypress E2E test suite in a headless environment.
 
-You don't need to change styles or HTML layout in this task. Change only `main.js` file.
+## 🚀 How to Run the Tests Locally
+
+To evaluate the test scripts and static analysis tools on your local machine, follow these steps:
+
+### 1. Environment Setup
+Clone the repository and install the Node.js dependencies:
+```bash
+npm install
